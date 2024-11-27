@@ -1,0 +1,5 @@
+spring.application.name=academia_backend
+
+spring.datasource.url=jdbc:mysql:<DB URL>
+spring.datasource.username=<ROOT>
+spring.datasource.password=<PASSWORD>
