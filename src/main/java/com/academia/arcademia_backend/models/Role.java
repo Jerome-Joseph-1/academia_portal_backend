@@ -8,10 +8,21 @@ import java.util.UUID;
 @Table(name = "roles")
 public class Role {
     @Id
-    @GeneratedValue
-    @Column(name = "id", nullable = false, columnDefinition = "UUID")
-    private UUID id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false, unique = true)
     private String role_name;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getRole_name() {
+        return role_name;
+    }
+
+    public void setRole_name(String role_name) {
+        this.role_name = role_name;
+    }
 }
