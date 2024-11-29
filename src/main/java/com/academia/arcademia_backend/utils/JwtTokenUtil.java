@@ -29,7 +29,7 @@ public class JwtTokenUtil {
                 .setClaims(claims)
                 .setSubject(userName)
                 .setIssuedAt(new Date(System.currentTimeMillis()))
-                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 30))
+                .setExpiration(new Date(System.currentTimeMillis() + 1000 * 60 * 5)) // 5 mins
                 .signWith(getSignKey(), SignatureAlgorithm.HS256).compact();
     }
 
